@@ -1,8 +1,12 @@
-title: MY TITLE
-description: my decription
+title: PQC后量子密码学介绍
+
+description: 整理后量子密码学知识,以及NIST的PQC标准
+
 theme: just-the-docs
 
 url: https://habezai.github.io/PQC
 
 aux_links:
   本项目的Repository: https://github.com/habezai/PQC
+
+logo: "/assets/images/PQC.png"
