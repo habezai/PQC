@@ -17,6 +17,6 @@ FIPS 205，也是为数字签名设计的。该标准采用 Sphincs+ 算法，�
 以 FALCON 为基础的 FIPS 206 标准草案发布后，该算法将被命名为 FN-DSA，是 FFT（快速傅里叶变换） over NTRU-Lattice-Based 数字签名算法的简称。
 
 # NIST的尚未发布的PQC标准
-FN-DSA
+- FN-DSA
 
 [<<< 回到首页](./index)
