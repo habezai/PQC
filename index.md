@@ -19,8 +19,10 @@ layout: home
     - [Kyber]
     - [Dilithium]
 
+- 外部链接
+    - [可参考的链接]
 
-
+[可参考的链接]:./可参考的链接
 [NIST的PQC标准]:./NIST的PQC标准
 [ML-KEM]:./ML-KEM
 [ML-DSA]:./ML-DSA
