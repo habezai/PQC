@@ -1,5 +1,5 @@
 ---
-title: NIST的PQC标准
+title: NIST PQC Standards
 layout: default
 
 ---
