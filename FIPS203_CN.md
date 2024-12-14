@@ -70,10 +70,66 @@ An output that was produced by a random bit generator and has not been previousl
 
 ## 2.2 缩略词
 
+1啊2
+
+1
+12
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+12
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+2
+1
+2
+1
+2
+1
+
 
 
 
 ## 3.3 ML‑KEM实施的要求
+
 
 [^1]:
 [^2]: 
