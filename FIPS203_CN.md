@@ -26,39 +26,40 @@ SP 800‑56A 和 SP 800‑56B 中规定的密钥建立方案容易受到使用�
 
 
 ## 2.1 术语和定义
-- approved FIPS-approved and/or NIST-recommended. An algorithm or technique that is either 1) specified in a FIPS or NIST recommendation, 2) adopted in a FIPS or NIST recommendation, or 3) specified in a list of NIST-approved security functions. 
+- approved   
+FIPS-approved and/or NIST-recommended. An algorithm or technique that is either 1) specified in a FIPS or NIST recommendation, 2) adopted in a FIPS or NIST recommendation, or 3) specified in a list of NIST-approved security functions. 
 
-- (KEM) ciphertext 
+- (KEM) ciphertext   
 A bit string that is produced by encapsulation and used as an input to decapsulation. 
 
-- cryptographic module 
+- cryptographic module   
 The set of hardware, software, and/or firmware that implements ap-proved cryptographic functions (including key generation) that are con-tained within the cryptographic boundary of the module. 
 
-- decapsulation 
+- decapsulation   
 The process of applying the Decaps algorithm of a KEM. This algorithm accepts a KEM ciphertext and the decapsulation key as input and pro-duces a shared secret key as output. 
 
-- decapsulation key 
+- decapsulation key   
 A cryptographic key produced by a KEM during key generation and used during the decapsulation process. The decapsulation key must be kept private and must be destroyed after it is no longer needed. (See Section 3.3.) 
 
-- decryption key 
+- decryption key   
 A cryptographic key that is used with a PKE in order to decrypt cipher-texts into plaintexts. The decryption key must be kept private and must be destroyed after it is no longer needed. 
 
-- destroy 
+- destroy   
 An action applied to a key or other piece of secret data. After a piece of secret data is destroyed, no information about its value can be re-covered. 
 
-- encapsulation 
+- encapsulation   
 The process of applying the Encaps algorithm of a KEM. This algorithm accepts the encapsulation key as input, requires private randomness, and produces a shared secret key and an associated ciphertext as out-put.
 
-- encapsulation key 
+- encapsulation key   
 A cryptographic key produced by a KEM during key generation and used during the encapsulation process. The encapsulation key can be made public. (See Section 3.3.) 
 
-- encryption key 
+- encryption key   
 A cryptographic key that is used with a PKE in order to encrypt plaintexts into ciphertexts. The encryption key can be made public. 
 
-- equivalent process 
+- equivalent process   
 Two processes are equivalent if the same output is produced when the same values are input to each process (either as input parameters, as values made available during the process, or both). 
 
-- fresh random value 
+- fresh random value   
 An output that was produced by a random bit generator and has not been previously used.
 
 ## 2.2 缩略词
