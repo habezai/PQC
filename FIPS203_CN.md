@@ -56,14 +56,16 @@ KEM 在密钥生成期间生成并在解封装过程中使用的密钥。**解�
 > 原文: An action applied to a key or other piece of secret data. After a piece of secret data is destroyed, no information about its value can be re-covered. 
 
 - encapsulation   
-应用 KEM 的 Encaps 算法的过程。此算法接受封装密钥***encapsulation key***作为输入，需要私有随机数***private randomness***，并生成共享密钥***shared secret key***和关联的密文***ciphertext***作为输出。
+应用 KEM 的 Encaps 算法的过程。此算法接受封装密钥***encapsulation key***作为输入，需要私有随机数***private randomness***，并生成共享密钥***shared secret key***和关联的密文***ciphertext***作为输出。   
 > 原文: The process of applying the Encaps algorithm of a KEM. This algorithm accepts the encapsulation key as input, requires private randomness, and produces a shared secret key and an associated ciphertext as out-put.
 
 - encapsulation key   
-A cryptographic key produced by a KEM during key generation and used during the encapsulation process. The encapsulation key can be made public. (See Section 3.3.) 
+KEM 在密钥生成过程中生成并在封装过程中使用的加密密钥。封装密钥可以公开。（参见第[3.3节]）。   
+> 原文: A cryptographic key produced by a KEM during key generation and used during the encapsulation process. The encapsulation key can be made public. (See Section 3.3.) 
 
-- encryption key   
-A cryptographic key that is used with a PKE in order to encrypt plaintexts into ciphertexts. The encryption key can be made public. 
+- encryption key     
+与PKE一起使用的加密密钥，用于将明文加密为密文。***encryption key***可以公开。   
+> 原文: A cryptographic key that is used with a PKE in order to encrypt plaintexts into ciphertexts. The encryption key can be made public. 
 
 - equivalent process   
 Two processes are equivalent if the same output is produced when the same values are input to each process (either as input parameters, as values made available during the process, or both). 
