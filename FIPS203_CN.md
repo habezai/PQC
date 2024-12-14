@@ -90,7 +90,7 @@ An output that was produced by a random bit generator and has not been previousl
 [^13]:
 [^14]:
 [^15]:
-[3.3节]: #3.3\ ML‑KEM实施的要求
+[3.3节]: #33-ML‑KEM实施的要求
 
 
 [<< 回到首页](./index)
