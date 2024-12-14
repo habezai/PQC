@@ -29,18 +29,22 @@ SP 800‑56A 和 SP 800‑56B 中规定的密钥建立方案容易受到使用�
 - approved   
 FIPS 批准和/或 NIST 推荐。  
 某种算法或技术至少符合以下某个条件: 1)在FIPS或NIST建议中指定，2)在FIPS或NIST建议中采用，3)在NIST批准的安全功能列表中指定。   
-> FIPS-approved and/or NIST-recommended. An algorithm or technique that is either 1) specified in a FIPS or NIST recommendation, 2) adopted in a FIPS or NIST recommendation, or 3) specified in a list of NIST-approved security functions.
+> 原文: FIPS-approved and/or NIST-recommended. An algorithm or technique that is either 1) specified in a FIPS or NIST recommendation, 2) adopted in a FIPS or NIST recommendation, or 3) specified in a list of NIST-approved security functions.
 
 - (KEM) ciphertext   
-A bit string that is produced by encapsulation and used as an input to decapsulation. 
+由封装行为生成的位字符串，用作解封装的输入。   
+> 原文: A bit string that is produced by encapsulation and used as an input to decapsulation. 
 
 - cryptographic module   
-The set of hardware, software, and/or firmware that implements ap-proved cryptographic functions (including key generation) that are con-tained within the cryptographic boundary of the module. 
+实现 approved 验证的加密功能（包括密钥生成）的硬件、软件和/或固件集，这些功能包含在模块的加密范畴内。   
+> 原文: The set of hardware, software, and/or firmware that implements ap-proved cryptographic functions (including key generation) that are con-tained within the cryptographic boundary of the module. 
 
 - decapsulation   
-The process of applying the Decaps algorithm of a KEM. This algorithm accepts a KEM ciphertext and the decapsulation key as input and pro-duces a shared secret key as output. 
+应用用 KEM 的 Decaps 算法的过程。此算法接受 KEM 的密文*ciphertext*和解封装密钥*decapsulation key*作为输入，并生成共享密钥作为输出   
+> 原文: The process of applying the Decaps algorithm of a KEM. This algorithm accepts a KEM ciphertext and the decapsulation key as input and pro-duces a shared secret key as output. 
 
 - decapsulation key   
+KEM 在密钥生成期间生成并在解封装过程中使用的密钥。**解封装密钥必须保持私有**，并且在不再需要后必须**销毁**。（参见第 [3.3节]）。   
 A cryptographic key produced by a KEM during key generation and used during the decapsulation process. The decapsulation key must be kept private and must be destroyed after it is no longer needed. (See Section 3.3.) 
 
 - decryption key   
@@ -68,6 +72,9 @@ An output that was produced by a random bit generator and has not been previousl
 
 
 
+
+## 3.3 ML‑KEM实施的要求
+
 [^1]:
 [^2]: 
 [^3]:
@@ -83,7 +90,7 @@ An output that was produced by a random bit generator and has not been previousl
 [^13]:
 [^14]:
 [^15]:
-
+[3.3节]: #3.3 ML‑KEM实施的要求
 
 
 [<< 回到首页](./index)
