@@ -27,7 +27,9 @@ SP 800‑56A 和 SP 800‑56B 中规定的密钥建立方案容易受到使用�
 
 ## 2.1 术语和定义
 - approved   
-FIPS-approved and/or NIST-recommended. An algorithm or technique that is either 1) specified in a FIPS or NIST recommendation, 2) adopted in a FIPS or NIST recommendation, or 3) specified in a list of NIST-approved security functions. 
+FIPS 批准和/或 NIST 推荐。  
+某种算法或技术至少符合以下某个条件: 1)在FIPS或NIST建议中指定，2)在FIPS或NIST建议中采用，3)在NIST批准的安全功能列表中指定。   
+> FIPS-approved and/or NIST-recommended. An algorithm or technique that is either 1) specified in a FIPS or NIST recommendation, 2) adopted in a FIPS or NIST recommendation, or 3) specified in a list of NIST-approved security functions.
 
 - (KEM) ciphertext   
 A bit string that is produced by encapsulation and used as an input to decapsulation. 
@@ -67,10 +69,21 @@ An output that was produced by a random bit generator and has not been previousl
 
 
 [^1]:
-
 [^2]: 
-
 [^3]:
+[^4]:
+[^5]:
+[^6]:
+[^7]:
+[^8]:
+[^9]:
+[^10]:
+[^11]:
+[^12]:
+[^13]:
+[^14]:
+[^15]:
+
 
 
 [<< 回到首页](./index)
