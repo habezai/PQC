@@ -60,7 +60,7 @@ KEM 在密钥生成期间生成并在解封装过程中使用的密钥。**解�
 > 原文: The process of applying the Encaps algorithm of a KEM. This algorithm accepts the encapsulation key as input, requires private randomness, and produces a shared secret key and an associated ciphertext as out-put.
 
 - encapsulation key   
-KEM 在密钥生成过程中生成并在封装过程中使用的加密密钥。封装密钥可以公开。（参见第[3.3节]）。   
+KEM 在密钥生成过程中生成并在封装过程中使用的加密密钥。***encapsulation key***可以公开。（参见第[3.3节]）。   
 > 原文: A cryptographic key produced by a KEM during key generation and used during the encapsulation process. The encapsulation key can be made public. (See Section 3.3.) 
 
 - encryption key     
@@ -68,10 +68,14 @@ KEM 在密钥生成过程中生成并在封装过程中使用的加密密钥。�
 > 原文: A cryptographic key that is used with a PKE in order to encrypt plaintexts into ciphertexts. The encryption key can be made public. 
 
 - equivalent process   
-Two processes are equivalent if the same output is produced when the same values are input to each process (either as input parameters, as values made available during the process, or both). 
+如果在向每个进程输入相同的值 （作为输入参数、作为进程期间可用的值，或两者兼而有之） 时产生相同的输出，则两个进程是等效的。   
+> Two processes are equivalent if the same output is produced when the same values are input to each process (either as input parameters, as values made available during the process, or both). 
 
 - fresh random value   
-An output that was produced by a random bit generator and has not been previously used.
+由随机位生成器生成且以前未使用过的输出。   
+> An output that was produced by a random bit generator and has not been previously used.
+
+
 
 ## 2.2 缩略词
 
