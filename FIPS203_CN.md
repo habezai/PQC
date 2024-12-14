@@ -40,21 +40,24 @@ FIPS 批准和/或 NIST 推荐。
 > 原文: The set of hardware, software, and/or firmware that implements ap-proved cryptographic functions (including key generation) that are con-tained within the cryptographic boundary of the module. 
 
 - decapsulation   
-应用用 KEM 的 Decaps 算法的过程。此算法接受 KEM 的密文*ciphertext*和解封装密钥*decapsulation key*作为输入，并生成共享密钥作为输出   
+应用用 KEM 的 Decaps 算法的过程。此算法接受 KEM 的密文***ciphertext***和解封装密钥***decapsulation key***作为输入，并生成共享密钥***shared secret key***作为输出   
 > 原文: The process of applying the Decaps algorithm of a KEM. This algorithm accepts a KEM ciphertext and the decapsulation key as input and pro-duces a shared secret key as output. 
 
 - decapsulation key   
 KEM 在密钥生成期间生成并在解封装过程中使用的密钥。**解封装密钥必须保持私有**，并且在不再需要后必须**销毁**。（参见第 [3.3节]）。   
-A cryptographic key produced by a KEM during key generation and used during the decapsulation process. The decapsulation key must be kept private and must be destroyed after it is no longer needed. (See Section 3.3.) 
+> 原文: A cryptographic key produced by a KEM during key generation and used during the decapsulation process. The decapsulation key must be kept private and must be destroyed after it is no longer needed. (See Section 3.3.) 
 
 - decryption key   
-A cryptographic key that is used with a PKE in order to decrypt cipher-texts into plaintexts. The decryption key must be kept private and must be destroyed after it is no longer needed. 
+与 PKE 一起使用的密钥，用于将密文解密为明文。**解密密钥必须保持私有**，并且在不再需要后必须**销毁**。    
+> 原文: A cryptographic key that is used with a PKE in order to decrypt cipher-texts into plaintexts. The decryption key must be kept private and must be destroyed after it is no longer needed. 
 
 - destroy   
-An action applied to a key or other piece of secret data. After a piece of secret data is destroyed, no information about its value can be re-covered. 
+销毁，应用于密钥或其他机密数据的操作。秘密数据销毁后，无法重新覆盖有关其值的信息。   
+> 原文: An action applied to a key or other piece of secret data. After a piece of secret data is destroyed, no information about its value can be re-covered. 
 
 - encapsulation   
-The process of applying the Encaps algorithm of a KEM. This algorithm accepts the encapsulation key as input, requires private randomness, and produces a shared secret key and an associated ciphertext as out-put.
+应用 KEM 的 Encaps 算法的过程。此算法接受封装密钥***encapsulation key***作为输入，需要私有随机数***private randomness***，并生成共享密钥***shared secret key***和关联的密文***ciphertext***作为输出。
+> 原文: The process of applying the Encaps algorithm of a KEM. This algorithm accepts the encapsulation key as input, requires private randomness, and produces a shared secret key and an associated ciphertext as out-put.
 
 - encapsulation key   
 A cryptographic key produced by a KEM during key generation and used during the encapsulation process. The encapsulation key can be made public. (See Section 3.3.) 
