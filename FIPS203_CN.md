@@ -26,7 +26,7 @@ SP 800‑56A 和 SP 800‑56B 中规定的密钥建立方案容易受到使用�
 
 
 ## 2.1 术语和定义
-- approved   
+- **approved**     
 FIPS 批准和/或 NIST 推荐。  
 某种算法或技术至少符合以下某个条件: 1)在FIPS或NIST建议中指定，2)在FIPS或NIST建议中采用，3)在NIST批准的安全功能列表中指定。   
 > 原文: FIPS-approved and/or NIST-recommended. An algorithm or technique that is either 1) specified in a FIPS or NIST recommendation, 2) adopted in a FIPS or NIST recommendation, or 3) specified in a list of NIST-approved security functions.
@@ -78,7 +78,7 @@ KEM 在密钥生成过程中生成并在封装过程中使用的加密密钥。*
 
 - hash function     
 A function on bit strings in which the length of the output is fixed. Approved hash functions (such as those specified in FIPS 180 [^5] and FIPS 202 [^6]) are designed to satisfy the following properties: 
-    - 1. (One-way) It is computationally infeasible to find any input that maps to any new pre-specified output.    
+    - 1. (One-way) It is computationally infeasible to find any input that maps to any new pre-specified output.
     - 2. (Collision-resistant) It is computationally infeasible to find any two distinct inputs that map to the same output.   
 
 
@@ -108,12 +108,65 @@ An individual person, organization, device, or process. In this specifica-tion, 
 A process (or data produced by a process) is said to be pseudorandom when the outcome is deterministic yet also appears random as long as the internal action of the process is hidden from observation. For cryptographic purposes, “effectively random” means “computationally indistinguishable from random within the limits of the intended security strength.”   
 
 - public channel    
-A communication channel between two parties. Such a channel can be observed and possibly also corrupted by third parties.    
+A communication channel between two parties. Such a channel can be observed and possibly also corrupted by third parties.
+
+- public-key encryption scheme (PKE)     
+A set of three cryptographic algorithms (KeyGen, Encrypt, and Decrypt) that can be used by two parties to send secret data over a public channel. Also known as an asymmetric encryption scheme. 
+
+- shared secret     
+A secret value that has been computed during a key-establishment scheme, is known by both participants, and is used as input to a keyderivation method to produce keying material. 
+
+- shared secret key     
+A shared secret that can be used directly as a cryptographic key in symmetric-key cryptography. It does not require additional key derivation. The shared secret key must be kept private and must be destroyed when no longer needed. 
+
+- security category    
+A number associated with the security strength of a post-quantum cryptographic algorithm, as specified by NIST (see [7]). 
+
+- security strength    
+A number associated with the amount of work (i.e., the number of operations) that is required to break a cryptographic algorithm or system. 
+
+- **shall**    
+Used to indicate a requirement of this standard. 
+
+- **should**    
+Used to indicate a strong recommendation but not a requirement of this standard. Ignoring the recommendation could lead to undesirable results.
 
 
 ## 2.2 缩略词
 
-1啊2
+|AES | Advanced Encryption Standard |
+
+|CBD |Centered Binomial Distribution |
+
+|FIPS| Federal Information Processing Standard |
+
+|KEM| Key-Encapsulation Mechanism |
+
+|LWE| Learning with Errors |
+
+|MLWE| Module Learning with Errors |
+
+|NIST| National Institute of Standards and Technology |
+
+|NISTIR| NIST Interagency or Internal Report|
+
+|NTT| Number-Theoretic Transform |
+
+|PKE| Public-Key Encryption |
+
+|PQC| Post-Quantum Cryptography |
+
+|PRF| Pseudorandom Function |
+
+|RBG| Random Bit Generator |
+
+|SHA| Secure Hash Algorithm|
+
+|SHAKE| Secure Hash Algorithm KECCAK |
+
+|SP| Special Publication |
+
+|XOF| Extendable-Output Function|
 
 1  
 12  
