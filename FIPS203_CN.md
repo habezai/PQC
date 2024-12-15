@@ -133,39 +133,24 @@ Used to indicate a strong recommendation but not a requirement of this standard.
 
 
 ## 2.2 缩略词
+| Acronyms | Description |
 | ----------- | ----------- |
 |AES | Advanced Encryption Standard |
-
 |CBD |Centered Binomial Distribution |
-
 |FIPS| Federal Information Processing Standard |
-
 |KEM| Key-Encapsulation Mechanism |
-
 |LWE| Learning with Errors |
-
 |MLWE| Module Learning with Errors |
-
 |NIST| National Institute of Standards and Technology |
-
 |NISTIR| NIST Interagency or Internal Report|
-
 |NTT| Number-Theoretic Transform |
-
 |PKE| Public-Key Encryption |
-
 |PQC| Post-Quantum Cryptography |
-
 |PRF| Pseudorandom Function |
-
 |RBG| Random Bit Generator |
-
 |SHA| Secure Hash Algorithm|
-
 |SHAKE| Secure Hash Algorithm KECCAK |
-
 |SP| Special Publication |
-
 |XOF| Extendable-Output Function|
 
 1  
