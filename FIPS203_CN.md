@@ -133,7 +133,7 @@ Used to indicate a strong recommendation but not a requirement of this standard.
 
 
 ## 2.2 缩略词
-
+| ----------- | ----------- |
 |AES | Advanced Encryption Standard |
 
 |CBD |Centered Binomial Distribution |
