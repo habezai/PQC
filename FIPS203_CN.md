@@ -120,7 +120,7 @@ A secret value that has been computed during a key-establishment scheme, is know
 A shared secret that can be used directly as a cryptographic key in symmetric-key cryptography. It does not require additional key derivation. The shared secret key must be kept private and must be destroyed when no longer needed. 
 
 - security category    
-A number associated with the security strength of a post-quantum cryptographic algorithm, as specified by NIST (see [7]). 
+A number associated with the security strength of a post-quantum cryptographic algorithm, as specified by NIST (see [^7]). 
 
 - security strength    
 A number associated with the amount of work (i.e., the number of operations) that is required to break a cryptographic algorithm or system. 
