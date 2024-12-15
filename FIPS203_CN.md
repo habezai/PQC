@@ -76,6 +76,40 @@ KEM 在密钥生成过程中生成并在封装过程中使用的加密密钥。*
 > An output that was produced by a random bit generator and has not been previously used.
 
 
+- hash function     
+A function on bit strings in which the length of the output is fixed. Approved hash functions (such as those specified in FIPS 180 [^5] and FIPS 202 [^6]) are designed to satisfy the following properties: 
+    - 1. (One-way) It is computationally infeasible to find any input that maps to any new pre-specified output.    
+    - 2. (Collision-resistant) It is computationally infeasible to find any two distinct inputs that map to the same output.   
+
+
+- input checking   
+Examination of a potential input to an algorithm for the purpose of determining whether it conforms to certain requirements.      
+
+- key   
+A bit string that is used in conjunction with a cryptographic algorithm, such as the encapsulation and decapsulation keys (of a KEM), the shared secret key (produced by a KEM), and the encryption and decryption keys (of a PKE). (See Section 3.3.)    
+
+
+- key-encapsulation mechanism (KEM)    
+A set of three cryptographic algorithms (KeyGen, Encaps, and Decaps) that can be used by two parties to establish a shared secret key over a public channel.   
+
+- key establishment   
+ A procedure that results in secret keying material that is shared among different parties.  
+
+- key pair    
+A set of two keys with the property that one key can be made public while the other key must be kept private. In this standard, this could refer to either the (encapsulation key, decapsulation key) key pair of a KEM or the (encryption key, decryption key) key pair of a PKE.   
+
+- little-endian    
+The property of a byte string having its bytes positioned in order of increasing significance. In particular, the leftmost (first) byte is the least significant, and the rightmost (last) byte is the most significant. The term “little-endian” may also be applied in the same manner to bit strings (e.g., the 8-bit string 11010001 corresponds to the byte 20 +21 +23 +27 = 139).  
+ 
+- party    
+An individual person, organization, device, or process. In this specifica-tion, there are two parties (e.g., Party A and Party B, or Alice and Bob) who jointly perform the key establishment process using a KEM.  
+
+- pseudorandom   
+A process (or data produced by a process) is said to be pseudorandom when the outcome is deterministic yet also appears random as long as the internal action of the process is hidden from observation. For cryptographic purposes, “effectively random” means “computationally indistinguishable from random within the limits of the intended security strength.”   
+
+- public channel    
+A communication channel between two parties. Such a channel can be observed and possibly also corrupted by third parties.    
+
 
 ## 2.2 缩略词
 
