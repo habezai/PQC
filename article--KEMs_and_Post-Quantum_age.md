@@ -22,7 +22,7 @@ layout: default
 
 **ECDH实现示例：**
 
-$$
+```bash
 KeyGen(): 
     私钥d = 随机标量()
     公钥Q = 标量乘(私钥d, 生成元G) = dG
@@ -36,6 +36,6 @@ Encapsulate(公钥):
 Decapsulate(私钥d ，密文ciphertext):
     s = 标量乘(私钥d, 密文ciphertext) = d × ciphertext = drG
     共享密钥shared key = KDF(s || 公钥Q || 密文ciphertext)
-$$
+```
 
 [<< 回到首页](./index)
