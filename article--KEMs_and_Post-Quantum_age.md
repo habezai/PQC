@@ -22,7 +22,7 @@ layout: default
 
 **ECDH实现示例：**
 
-```bash
+```txt
 KeyGen(): 
     私钥d = 随机标量()
     公钥Q = 标量乘(私钥d, 生成元G) = dG
