@@ -15,9 +15,7 @@ layout: home
     - [ML-DSA]
 
 - 原理相关
-    - [前置数学知识]
-    - [Kyber]
-    - [Dilithium]
+    - [Lattice格基础数学知识]
 
 - 外部链接
     - [可参考的链接]
@@ -26,7 +24,7 @@ layout: home
 [NIST的PQC标准]:./NIST的PQC标准
 [ML-KEM]:./ML-KEM
 [ML-DSA]:./ML-DSA
-[前置数学知识]:./前置数学知识
+[Lattice格基础数学知识]:./前置数学知识
 [Kyber]:./Kyber
 [Dilithium]:./Dilithium
 
