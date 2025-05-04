@@ -25,10 +25,14 @@ k = 3
 
 - 私钥 $$s \in S_{η1}^k $$         ,用于解密
 
-### 加密 和 解密
-### 域参数 和 密钥生成
+## 加密
+加密 一个$$ m\in\{0,1\}^n $$
+1. 接收者获取 公钥 (A,t)
+2. 选择 $$ r \in S^k_{η_{1'}} , e_1 \in S^k_{η_{2}} 且\ e_2 \in S^k_{η_{2'}}  $$
+3. 计算密文(u,v)  $$ u  = A^Tr + e_1 , \\  v  = t^Tr + e_2 + \lceil q/2 \rceil m$$
 
-
+## 解密
+$$m = Round_q(v - s^Tu) \\ =Round_q(t^Tr + e_2 + \lceil q/2 \rceil m - s^Tu) \\ =Round_q(t^Tr + e_2 + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1)) \\ =Round_q((As+e)^Tr + e_2 + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1)) \\ =Round_q(s^TA^Tr + e^Tr + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1))\\ =Round_q(\lceil q/2 \rceil m - e^Tr + s^Te_1) $$
 ## ML-KEM 计算工具
 ### openssl 3.5.0 对于 ML-KEM 的应用
 ML-KEM密钥对生成
