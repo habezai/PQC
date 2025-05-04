@@ -1,7 +1,7 @@
 ---
 title: ML-KEM
 layout: default
-
+math: katex
 ---
 ## NIST 标准
 - [FIPS203中文版]
@@ -21,9 +21,9 @@ k = 3
 η2 = 2
 ```
 密钥生成：
-公钥 (A,t), 其中  $$A \in R_q^{k×k} $$, $$s \in S_{η1}^k $$,$$e \in S_{η2}^k $$ t = As + e ,用于加密
+公钥 (A,t), 其中  $A \in R_q^{k×k} $, $s \in S_{η1}^k $,$e \in S_{η2}^k $ , $t = As + e $,用于加密
 
-私钥 $$s \in S_{η1}^k $$         ,用于解密
+私钥 $s \in S_{η1}^k $         ,用于解密
 
 ### 加密 和 解密
 ### 域参数 和 密钥生成
