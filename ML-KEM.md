@@ -28,11 +28,13 @@ k = 3
 ## 加密
 加密 一个$$ m\in\{0,1\}^n $$
 1. 接收者获取 公钥 (A,t)
-2. 选择 $$ r \in S^k_{η_{1'}} , e_1 \in S^k_{η_{2}} 且\ e_2 \in S^k_{η_{2'}}  $$
+2. 选择 $$ r \in _RS^k_{η_{1'}} , e_1 \in _RS^k_{η_{2'}} 且\ e_2 \in _RS^k_{η_{2'}}  $$.  η1'为81 ，η2' 为82
 3. 计算密文(u,v)  $$ u  = A^Tr + e_1 , \\  v  = t^Tr + e_2 + \lceil q/2 \rceil m$$
 
 ## 解密
-$$m = Round_q(v - s^Tu) \\ =Round_q(t^Tr + e_2 + \lceil q/2 \rceil m - s^Tu) \\ =Round_q(t^Tr + e_2 + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1)) \\ =Round_q((As+e)^Tr + e_2 + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1)) \\ =Round_q(s^TA^Tr + e^Tr + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1))\\ =Round_q(\lceil q/2 \rceil m - e^Tr + s^Te_1) $$
+$$\begin{align*} m &= Round_q(v - s^Tu) \\ &=Round_q(t^Tr + e_2 + \lceil q/2 \rceil m - s^Tu) \\ &=Round_q(t^Tr + e_2 + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1)) \\ &=Round_q((As+e)^Tr + e_2 + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1)) \\ &=Round_q(s^TA^Tr + e^Tr + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1))\\ &=Round_q(\lceil q/2 \rceil m - e^Tr + s^Te_1)  \end{align*}$$
+其中 $$size(e^Tr) =  nη_2η_{1'} = 256*2*81 $$,
+其中 $$size(s^Te_1) = nη_1η_{2'} = 256*2*81 $$
 ## ML-KEM 计算工具
 ### openssl 3.5.0 对于 ML-KEM 的应用
 ML-KEM密钥对生成
