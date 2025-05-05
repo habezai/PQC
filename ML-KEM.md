@@ -34,13 +34,16 @@ k = 3
 ## 解密
 $$
 m = Round_q(v - s^Tu) \\ =Round_q(t^Tr + e_2 + \lceil q/2 \rceil m - s^Tu) \\ =Round_q(t^Tr + e_2 + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1)) \\ =Round_q((As+e)^Tr + e_2 + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1)) \\ =Round_q(s^TA^Tr + e^Tr + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1))\\ =Round_q(\lceil q/2 \rceil m - e^Tr + s^Te_1) $$
+
 其中 $$size(e^Tr) =  nη_2η_{1'} = 256*2*2 =  1024 $$,
+
 其中 $$size(s^Te_1) = nη_1η_{2'} = 256*2*2 =  1024 $$
 
 ##  Toy example - Kyber PKE (参数设置小只是为了方便展示)
  Domain parameters: 
 ✦ Key generation: Alice selects:  
 $$q =137\\ n=4\\ k=2\\ η_1=2\\ η_2=2$$
+
 $$A = \begin{bmatrix}
 21 + 57x + 78x^{2}+43x^{3}&126 + 122x + 19x^{2}+125x^{3}\\
 111 + 9x + 63x^{2}+33x^{3}&105 + 61x + 71x^{2}+64x^{3}
@@ -49,7 +52,7 @@ $$
 s = \begin{bmatrix}
 1 + 2x - x^{2}+2x^{3} \\
  -x + 2x^{3}
-\end{bmatrix}, \quad
+\end{bmatrix}, \quad \\
 e = \begin{bmatrix}
 1 - x^{2}+x^{3} \\
  -x + x^{2}
