@@ -41,6 +41,7 @@ m = Round_q(v - s^Tu) \\ =Round_q(t^Tr + e_2 + \lceil q/2 \rceil m - s^Tu) \\ =R
 
 ##  Toy example - Kyber PKE (参数设置小只是为了方便展示)
  Domain parameters: 
+
 ✦ Key generation: Alice selects:  
 $$q =137\\ n=4\\ k=2\\ η_1=2\\ η_2=2$$
 
