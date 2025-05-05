@@ -81,9 +81,9 @@ $$
 ，接着Bob选择 $$r, e_1, e_2$$
 
 其中
-\(
+$$$$
 r = \begin{bmatrix}-2 + 2x + x^{2}-x^{3}\\-1 + x + x^{2}\end{bmatrix}, \quad e_1 = \begin{bmatrix}1 - 2x^{2}+x^{3}\\-1 + 2x - 2x^{2}+x^{3}\end{bmatrix}, \quad e_2 = 2 + 2x - x^{2}+x^{3}
-\)
+$$$$
 
 
 
