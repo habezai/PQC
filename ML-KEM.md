@@ -69,10 +69,22 @@ $$
 ![图 1](images/ce4468d8f977be3011a70dbe8d739e1d7102c8141abb9357325c73c3c992105c.jpg) 
 
 
-A,t 用于加密，s用于解密
+Alice的公钥(A,t)用于加密，私钥s用于解密
 
 
 ### toy example: 加密
+Bob进行加密：
+首先，消息编码为 多项式:
+$$ 
+m=0111 ↔ x+x^2+x^3
+$$
+，接着Bob选择 $$r, e_1, e_2$$
+
+其中
+\(
+r = \begin{bmatrix}-2 + 2x + x^{2}-x^{3}\\-1 + x + x^{2}\end{bmatrix}, \quad e_1 = \begin{bmatrix}1 - 2x^{2}+x^{3}\\-1 + 2x - 2x^{2}+x^{3}\end{bmatrix}, \quad e_2 = 2 + 2x - x^{2}+x^{3}
+\)
+
 
 
 
