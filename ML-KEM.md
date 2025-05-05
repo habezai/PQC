@@ -59,6 +59,18 @@ e = \begin{bmatrix}
 \end{bmatrix}
 $$
 并且计算
+$$\\
+t = As + e = \begin{bmatrix}
+55 + 96x + 123x^{2}+ 7x^{3}\\
+32 + 27x + 127x^{2}+ 100x^{3}
+\end{bmatrix}
+$$
+![图 0](images/42e7e2b6a5d84967fabf514acd8dae6ce849da943d3907eccb4c6aa28834fa16.jpg)
+A,t 用于加密，s用于解密
+
+
+### toy example: 加密
+
 
 
 ## ML-KEM 计算工具
