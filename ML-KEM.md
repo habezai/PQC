@@ -66,7 +66,8 @@ t = As + e = \begin{bmatrix}
 32 + 27x + 127x^{2}+ 100x^{3}
 \end{bmatrix}
 $$
-![图 0](images/42e7e2b6a5d84967fabf514acd8dae6ce849da943d3907eccb4c6aa28834fa16.jpg?x=200)
+![图 1](images/ce4468d8f977be3011a70dbe8d739e1d7102c8141abb9357325c73c3c992105c.jpg) 
+
 
 A,t 用于加密，s用于解密
 
