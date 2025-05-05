@@ -32,7 +32,8 @@ k = 3
 3. 计算密文(u,v)  $$ u  = A^Tr + e_1 , \\  v  = t^Tr + e_2 + \lceil q/2 \rceil m$$
 
 ## 解密
-$$\begin{align} m &= Round_q(v - s^Tu) \\ &=Round_q(t^Tr + e_2 + \lceil q/2 \rceil m - s^Tu) \\ &=Round_q(t^Tr + e_2 + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1)) \\ &=Round_q((As+e)^Tr + e_2 + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1)) \\ &=Round_q(s^TA^Tr + e^Tr + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1))\\ &=Round_q(\lceil q/2 \rceil m - e^Tr + s^Te_1)  \end{align}$$
+$$
+m = Round_q(v - s^Tu) \\ =Round_q(t^Tr + e_2 + \lceil q/2 \rceil m - s^Tu) \\ =Round_q(t^Tr + e_2 + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1)) \\ =Round_q((As+e)^Tr + e_2 + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1)) \\ =Round_q(s^TA^Tr + e^Tr + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1))\\ =Round_q(\lceil q/2 \rceil m - e^Tr + s^Te_1) $$
 其中 $$size(e^Tr) =  nη_2η_{1'} = 256*2*2 =  1024 $$,
 其中 $$size(s^Te_1) = nη_1η_{2'} = 256*2*2 =  1024 $$
 
