@@ -82,7 +82,13 @@ $$
 
 其中
 $$
-r = \begin{bmatrix}-2 + 2x + x^{2}-x^{3}\\-1 + x + x^{2}\end{bmatrix}, \quad e_1 = \begin{bmatrix}1 - 2x^{2}+x^{3}\\-1 + 2x - 2x^{2}+x^{3}\end{bmatrix}, \quad e_2 = 2 + 2x - x^{2}+x^{3}
+r = \begin{bmatrix}-2 + 2x + x^{2}-x^{3}\\-1 + x + x^{2}\end{bmatrix}, \quad e_1 = \begin{bmatrix}1 - 2x^{2}+x^{3}\\-1 + 2x - 2x^{2}+x^{3}\end{bmatrix}, \quad  e_2 = 2 + 2x - x^{2}+x^{3}
+$$
+
+然后计算：
+$$
+u = A^Tr + e_1=\begin{bmatrix}56 + 32x+77x^2 + 9x^3\\45 + 21x+2x^2+127x^3\end{bmatrix} \\ \\
+v = t^Tr + e_2+ 69m = 3 + 10x + 8x^2 + 123x^3
 $$
 
 
