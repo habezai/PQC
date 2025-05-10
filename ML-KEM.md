@@ -42,7 +42,7 @@ k = 3
 ## 加密
 加密 一个$$ m\in\{0,1\}^n $$
 1. 接收者获取 公钥 (A,t)
-2. 选择 $$ r \in _RS^k_{η_{1'}} , e_1 \in _RS^k_{η_{2'}} 且\ e_2 \in _RS^k_{η_{2'}}  $$.  η1'为81 ，η2' 为82
+2. 选择 $$ r \in _RS^k_{η_{1'}} , e_1 \in _RS^k_{η_{2'}} 且\ e_2 \in _RS^k_{η_{2'}}  $$.  η1'为η1 ，η2' 为η2
 3. 计算密文(u,v)  
 $$ u  = A^Tr + e_1 , \\  v  = t^Tr + e_2 + \lceil q/2 \rceil m$$
 
@@ -113,7 +113,7 @@ $$
 ### toy example: 解密
 Alice使用她的解密密钥s，计算 $$v - s^Tu = 4 + 60x + 79x^2 + 66x^3$$
 且，round之后,q/4 = 137/4=34.25，即 [-34,34] 的系数设置为0，其余[35,68]∪[-68,-34] 为1:
-得到系数 $$0 + 1x^1 + 1x^2 + 1x^3$$
+得到round之后的多项式 $$0 + 1x^1 + 1x^2 + 1x^3$$
 于是 恢复了原消息：0111
 
 ## 安全性
@@ -124,7 +124,17 @@ Alice使用她的解密密钥s，计算 $$v - s^Tu = 4 + 60x + 79x^2 + 66x^3$$
 $$
 \begin{bmatrix} u \\ v \end{bmatrix} = \begin{bmatrix} A^T \\ t^T \end{bmatrix} r + \begin{bmatrix} e_1 \\ e_2 \end{bmatrix} + \begin{bmatrix} 0 \\ \left\lceil \frac{q}{2} \right\rfloor \end{bmatrix} m $$
 
-
+根据 D-MLWE 假设，
+$$
+\begin{bmatrix} A^T \\ t^T \end{bmatrix}
+$$
+与随机数无法区分。同样根据D-MLWE 假设，
+$$
+\begin{bmatrix} A^T \\ t^T \end{bmatrix}r + \begin{bmatrix}
+e_1 \\ e_2 \end{bmatrix}= \begin{bmatrix} A^Tr + e_1 \\
+t^Tr + e_2 \end{bmatrix}
+$$
+与随机数无法区分。
 
 
 
