@@ -90,6 +90,46 @@ $$
 u = A^Tr + e_1=\begin{bmatrix}56 + 32x+77x^2 + 9x^3\\45 + 21x+2x^2+127x^3\end{bmatrix} \\ \\
 v = t^Tr + e_2+ 69m = 3 + 10x + 8x^2 + 123x^3
 $$
+密文 c  = (u,v)
+
+![图 3](images/d288924f5e38fd93046ab9c231f870e1dc09ccc7996470721009d8dd4a9fa0ab.jpg)  
+
+
+### toy example: 解密
+Alice使用她的解密密钥s，计算 $$v - s^Tu = 4 + 60x + 79x^2 + 66x^3$$
+且，round之后,q/4 = 137/4=34.25，即 [-34,34] 的系数设置为0，其余[35,68]∪[-68,-34] 为1:
+得到系数 $$0 + 1x^1 + 1x^2 + 1x^3$$
+于是 恢复了原消息：0111
+
+## 安全性
+声称：假设 D-MLWE 问题难以解决，简化的 Kyber-PKE 方案在选择明文攻击(chosen-plaintext attack)下具有不可区分性。
+
+论据：
+加密操作：
+
+$$
+\begin{bmatrix}
+u \\
+v
+\end{bmatrix}
+=
+\begin{bmatrix}
+A^T \\
+t^T
+\end{bmatrix}
+r + 
+\begin{bmatrix}
+e_1 \\
+e_2
+\end{bmatrix}
++ 
+\begin{bmatrix}
+0 \\
+\frac{q}{2}
+\end{bmatrix}
+$$
+
+
 
 
 
