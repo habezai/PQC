@@ -4,8 +4,15 @@ layout: default
 math: katex
 ---
 
-- TOC
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
 {:toc}
+</details>
+
 
 ## NIST 标准
 - [FIPS203中文版]
