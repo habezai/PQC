@@ -124,7 +124,7 @@ Alice使用她的解密密钥s，计算 $$v - s^Tu = 4 + 60x + 79x^2 + 66x^3$$
 $$
 \begin{bmatrix} u \\ v \end{bmatrix} = \begin{bmatrix} A^T \\ t^T \end{bmatrix} r + \begin{bmatrix} e_1 \\ e_2 \end{bmatrix} + \begin{bmatrix} 0 \\ \left\lceil \frac{q}{2} \right\rfloor \end{bmatrix} m $$
 
-根据 D-MLWE 假设， $ \begin{bmatrix} A^T \\ t^T \end{bmatrix} $ 与随机数无法区分。同样根据D-MLWE 假设，
+根据 D-MLWE 假设，$\begin{bmatrix} A^T \\ t^T \end{bmatrix}$ 与随机数无法区分。同样根据D-MLWE 假设，
 $$
 \begin{bmatrix} A^T \\ t^T \end{bmatrix}r + \begin{bmatrix}
 e_1 \\ e_2 \end{bmatrix}= \begin{bmatrix} A^Tr + e_1 \\
