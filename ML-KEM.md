@@ -111,23 +111,7 @@ Alice使用她的解密密钥s，计算 $$v - s^Tu = 4 + 60x + 79x^2 + 66x^3$$
 论据：
 加密操作：
 $$
-\begin{bmatrix}
-u \\ v \end{bmatrix}
-= \begin{bmatrix}
-A^T \\ t^T
-\end{bmatrix}
-r + 
-\begin{bmatrix}
-e_1 \\
-e_2
-\end{bmatrix}
-+ 
-\begin{bmatrix}
-0 \\
-\left\lceil \frac{q}{2} \right\rfloor
-\end{bmatrix}
-m
-$$
+\begin{bmatrix} u \\ v \end{bmatrix} = \begin{bmatrix} A^T \\ t^T \end{bmatrix} r + \begin{bmatrix} e_1 \\ e_2 \end{bmatrix} + \begin{bmatrix} 0 \\ \left\lceil \frac{q}{2} \right\rfloor \end{bmatrix} m $$
 
 
 
