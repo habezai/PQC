@@ -136,6 +136,8 @@ t^Tr + e_2 \end{bmatrix}
 $$
 与随机数无法区分。
 
+因此，从对手的角度来看，$v$ 似乎是 \(R_q\) 中随机元素 \((\boldsymbol{t}^T\boldsymbol{r} + e_2)\) 与消息多项式 \(\left\lceil\frac{q}{2}\right\rceil m\) 之和 ，所以对手无法得知关于 \(m\) 的任何信息。
+
 
 
 
