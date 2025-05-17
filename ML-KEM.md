@@ -1,7 +1,7 @@
 ---
 title: ML-KEM
 layout: default
-math: mathjax
+math: katex
 ---
 
 <details open markdown="block">
@@ -41,14 +41,15 @@ k = 3
 
 ## 加密
 加密 一个$$ m\in\{0,1\}^n $$
-1. 接收者获取 公钥 (A,t)
+1. Bob 获取 公钥 (A,t)
 2. 选择 $$ r \in _RS^k_{η_{1'}} , e_1 \in _RS^k_{η_{2'}} 且\ e_2 \in _RS^k_{η_{2'}}  $$.  η1'为η1 ，η2' 为η2
 3. 计算密文(u,v)  
 $$ u  = A^Tr + e_1 , \\  v  = t^Tr + e_2 + \lceil q/2 \rceil m$$
 
 ## 解密
+Alice可以使用私钥s解密
 $$
-m = Round_q(v - s^Tu) \\ =Round_q(t^Tr + e_2 + \lceil q/2 \rceil m - s^Tu) \\ =Round_q(t^Tr + e_2 + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1)) \\ =Round_q((As+e)^Tr + e_2 + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1)) \\ =Round_q(s^TA^Tr + e^Tr + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1))\\ =Round_q(\lceil q/2 \rceil m - e^Tr + s^Te_1) $$
+m = Round_q(v - s^Tu) \\ =Round_q(t^Tr + e_2 + \lceil q/2 \rceil m - s^Tu) \\ =Round_q(t^Tr + e_2 + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1)) \\ =Round_q((As+e)^Tr + e_2 + \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1)) \\ =Round_q(s^TA^Tr + e^Tr + e_2+ \lceil q/2 \rceil m - (s^TA^Tr+s^Te_1))\\ =Round_q(\lceil q/2 \rceil m+ e^Tr + e_2 - s^Te_1) $$
 
 其中 $$size(e^Tr) =  nη_2η_{1'} = 256*2*2 =  1024 $$,
 
@@ -134,7 +135,9 @@ Rounded value  ◄─────────────┐                    
 $$
 \begin{bmatrix} u \\ v \end{bmatrix} = \begin{bmatrix} A^T \\ t^T \end{bmatrix} r + \begin{bmatrix} e_1 \\ e_2 \end{bmatrix} + \begin{bmatrix} 0 \\ \left\lceil \frac{q}{2} \right\rfloor \end{bmatrix} m $$
 
-根据 D-MLWE 假设，$$\begin{bmatrix} A^T \\ t^T \end{bmatrix}$$ 与随机数无法区分。同样根据D-MLWE 假设，
+根据 D-MLWE 假设，$$\begin{bmatrix} A^T \\ t^T \end{bmatrix}$$ 与随机数无法区分。
+![图 4](images/5446d6bb3836f10c994e77cf91de17e65bd3cf28289f25b568ce86e4674e19ca.jpg)  
+同样根据D-MLWE 假设，
 $$
 \begin{bmatrix} A^T \\ t^T \end{bmatrix}r + \begin{bmatrix}
 e_1 \\ e_2 \end{bmatrix}= \begin{bmatrix} A^Tr + e_1 \\
@@ -145,7 +148,9 @@ $$
 因此，从对手的角度来看，$$v$$ 似乎是 $$R_q$$ 中随机元素 $$(\boldsymbol{t}^T\boldsymbol{r} + e_2)$$ 与消息多项式 $$\left\lceil\frac{q}{2}\right\rceil m$$ ，所以对手无法得知关于 \(m\) 的任何信息。
 
 
-
+## 解密并不总是有效
+问题：解密是否有效？即，
+$$m = \mathrm{Round}_q (v - s^T u)$$是否成立?
 
 ## ML-KEM 计算工具
 ### openssl 3.5.0 对于 ML-KEM 的应用
