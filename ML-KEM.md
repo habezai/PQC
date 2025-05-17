@@ -1,7 +1,7 @@
 ---
 title: ML-KEM
 layout: default
-math: katex
+math: mathjax
 ---
 
 <details open markdown="block">
