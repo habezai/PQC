@@ -112,7 +112,7 @@ $$
 
 ### toy example: 解密
 Alice使用她的解密密钥s，计算 $$v - s^Tu = 4 + 60x + 79x^2 + 66x^3$$
-且，round之后,q/4 = 137/4=34.25，即 [-34,34] 的系数设置为0，其余[35,68]∪[-68,-34] 为1:
+且，round之后,q/4 = 137/4=34.25，即 [-34,34] 的系数设置为0，其余[35,68]∪[-68,-35] 为1:
 得到round之后的多项式 $$0 + 1x^1 + 1x^2 + 1x^3$$
 于是 恢复了原消息：0111
 ```txt
@@ -134,7 +134,7 @@ Rounded value  ◄─────────────┐                    
 $$
 \begin{bmatrix} u \\ v \end{bmatrix} = \begin{bmatrix} A^T \\ t^T \end{bmatrix} r + \begin{bmatrix} e_1 \\ e_2 \end{bmatrix} + \begin{bmatrix} 0 \\ \left\lceil \frac{q}{2} \right\rfloor \end{bmatrix} m $$
 
-根据 D-MLWE 假设，$\begin{bmatrix} A^T \\ t^T \end{bmatrix}$ 与随机数无法区分。同样根据D-MLWE 假设，
+根据 D-MLWE 假设，$$\begin{bmatrix} A^T \\ t^T \end{bmatrix}$$ 与随机数无法区分。同样根据D-MLWE 假设，
 $$
 \begin{bmatrix} A^T \\ t^T \end{bmatrix}r + \begin{bmatrix}
 e_1 \\ e_2 \end{bmatrix}= \begin{bmatrix} A^Tr + e_1 \\
@@ -142,7 +142,7 @@ t^Tr + e_2 \end{bmatrix}
 $$
 与随机数无法区分。
 
-因此，从对手的角度来看，$$v$$ 似乎是 $$R_q$$ 中随机元素 \((\boldsymbol{t}^T\boldsymbol{r} + e_2)\) 与消息多项式 \(\left\lceil\frac{q}{2}\right\rceil m\) 之和 ，所以对手无法得知关于 \(m\) 的任何信息。
+因此，从对手的角度来看，$$v$$ 似乎是 $$R_q$$ 中随机元素 $$(\boldsymbol{t}^T\boldsymbol{r} + e_2)$$ 与消息多项式 $$\left\lceil\frac{q}{2}\right\rceil m$$ ，所以对手无法得知关于 \(m\) 的任何信息。
 
 
 
