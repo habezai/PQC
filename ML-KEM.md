@@ -152,6 +152,61 @@ $$
 问题：解密是否有效？即，
 $$m = \mathrm{Round}_q (v - s^T u)$$是否成立?
 
+
+首先之前讨论过
+$$
+(v - s^Tu) \\  =(\lceil q/2 \rceil m+ e^Tr + e_2 - s^Te_1) $$
+
+那么我们让 $$u' = u + e_u, \\ v' = v + e_v$$
+则 $$(v' - s^Tu') \\  =\lceil q/2 \rceil m+ e^Tr + e_2 - s^Te_1 + e_v - s^T e_u $$
+
+因此，如果误差多项式$$E(x)=e^Tr + e_2 - s^Te_1+ e_v - s^T e_u $$的每个系数$E_i$满足
+$$-q/4 < E_i \bmod q < q/4$$，即$$\|E\|_{\infty}<q/4$$，则$$\text{Round}_q(v - s^Tu)=m$$。
+
+现在，$$\|E_i\|_{\infty}\leq kn\eta_1\eta_2+\eta_2+kn\eta_1\eta_2$$。
+
+对于ML - KEM - 768参数($$q = 3329, n = 256, k = 3, \eta_1=\eta_2 = 2$$)，我们有
+$\|E_i\|_{\infty}\leq6146 \nless q/4$。因此，不能保证解密成功。
+
+然而，**可以证明**以接近1的概率$\|E\|_{\infty}<q/4$。因此，解密几乎肯定会成功。 
+
+# V2b：优化
+## 密钥的字节大小以及密文的字节大小
+为了具体起见，我们将考虑ML-KEM-768
+parameters($$q = 3329, n = 256, k = 3, \eta_1 = 2, \eta_2 = 2$$)。
+在$$\mathbb{Z}_q$$中，整数的位长度是$$\lceil \log_2 3329 \rceil = 12$$位。
+
+加密密钥：加密密钥$$(A, t)$$的字节大小是
+$$(3^2 \times 256 \times 12)+(3 \times 256 \times 12) = 36864\text{位}$$，即4608字节。
+
+密文：密文$c = (u, v)$的字节大小是
+$$(3 \times 256 \times 12)+(256 \times 12) = 12288 \text{位}$$，即1536字节。
+### 更小的密钥
+想法：从随机（且公开）的256位种子$$\rho$$生成A。
+
+通过首先选择$$\rho \in_R \{0, 1\}^{256}$$，然后通过对计数器哈希$$\rho$$来生成多项式的系数，从而生成A中的多项式。
+
+加密密钥是$$(\rho, t)$$而不是$$(A, t)$$。
+
+任何知道$$\rho$$的人都可以生成A。
+
+现在加密密钥的大小是$$256 + (3 \times 256 \times 12)$$位，即1184字节（相比4608字节大幅减少）。 
+
+## Compress
+想法: 丢弃密文$$c = (u, v)$$中所有多项式系数的“低阶”位。
+
+设$$1 \leq d \leq \lfloor \log_2 q \rfloor$$，并定义:
+对于$$x \in [0, q - 1]$$，$$Compress_q(x, d)=\lceil (2^d/q) \cdot x \rceil \bmod 2^d$$。
+对于$$y \in [0, 2^d - 1]$$，$$Decompress_q(y, d)=\lceil (q/2^d) \cdot y \rceil \bmod q$$。
+
+事实: 设$x \in [0, q - 1]$且$x' = \text{Decompress}_q(\text{Compress}_q(x, d), d)$。
+那么$\|x' - x\|_{\infty} \leq \lfloor q/2^{d + 1} \rfloor$。
+
+函数“压缩”和“解压缩”自然地扩展到$R_q$中的多项式以及$R_q^k$中的多项式向量。 
+
+## 中心二项式分布
+## 快速多项式乘法
+ 
 ## ML-KEM 计算工具
 ### openssl 3.5.0 对于 ML-KEM 的应用
 ML-KEM密钥对生成
